@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boas-vindas</title>
+    <script>
+        function mostrarBoasVindas() {
+            // Pega o valor do campo de texto
+            var nome = document.getElementById("nome").value;
+            
+            // Exibe a mensagem de boas-vindas
+            if (nome) {
+                document.getElementById("mensagem").innerHTML = "Bem-vindo, " + nome + "!";
+            } else {
+                document.getElementById("mensagem").innerHTML = "Por favor, insira seu nome.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Bem-vindo ao nosso site!</h1>
+    
+    <label for="nome">Digite seu nome:</label>
+    <input type="text" id="nome" placeholder="Seu nome aqui">
+    <button onclick="mostrarBoasVindas()">Enviar</button>
+    
+    <p id="mensagem"></p>
+</body>
+</html>
